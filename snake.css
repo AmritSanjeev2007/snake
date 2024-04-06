@@ -1,0 +1,57 @@
+:root {
+    --columns: 8;
+}
+
+html, body {
+    margin: 0; padding: 0;
+}
+
+header {
+    text-align: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+
+    margin-top: 20px;
+}
+
+div#grid {
+    display: grid;
+    border: 1px solid black;
+
+    width: 600px;
+    height: 600px;
+
+    margin-left: auto; margin-right: auto;
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+div#grid > div {
+    border: 1px solid green;
+}
+
+div#grid > div[aria-label = "snake-head"] {
+    background-color: darkgray;
+}
+div#grid > div[aria-label = "snake"] {
+    background-color: black;
+}
+div#grid > div[aria-label = "apple"] {
+    background-color: red;
+}
+
+button#start {
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+
+    background-color: aliceblue;
+
+    border-radius: 8px;
+    border: 1px solid black;
+    
+    margin-top: 20px;
+    left: calc(50vw - 50px);
+}
